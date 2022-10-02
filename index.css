@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #eee;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  header, footer { 
+    flex: none; 
+  }
+/* header related  start */
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: darkslateblue;
+}
+
+.sub-nav {
+  display: flex;
+  flex: 0 0 100px;
+  background-color: white;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.horizontal.nav-list.full-width {
+display: none;
+}
+
+.horizontal.nav-list.short-width {
+  display: flex;
+} 
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  border-right: 10px; 
+  list-style: none;
+}
+
+.horizontal.nav-list{
+  display: flex;
+  flex-direction: row;
+}
+
+.horizontal.nav-list a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  border-right: 1px solid white;
+}
+
+.nav-list li:last-of-type a { 
+  border-right: 0;
+}
+
+.search-form {
+  display: flex;
+  flex: 1; 
+}
+
+input {
+  display: flex;
+  flex: 1 0;
+  border: none;
+  border-bottom: 1px solid darkblue;
+  padding: 10px 10px;
+  background-color: lightgrey;
+}
+
+.company-name {
+  font-size: 40px;
+  color: darkcyan;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  margin: 0 1em;
+}
+
+.credit-offer {
+  background-color: rgb(226, 43, 43);
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px;
+  flex-shrink: 0;
+}
+
+/* Media Query */
+@media (min-width: 768px) {
+  .horizontal.nav-list.full-width {
+    display: flex;
+    }
+    
+    .horizontal.nav-list.short-width {
+      display: none;
+    }
+}
+
+/* header related end */
+
+  /*  left side nav related start */
+  main {
+    display: flex;
+    flex: 1 0 auto;
+  }
+
+  .categories {
+    display: flex;
+    flex: 0 0 256px;
+    flex-direction: column;
+}
+
+.categories a {
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: rgb(52, 52, 249);
+    color: white;
+    padding: 10px;
+    margin: 10px 30px 0;
+  }
+
+  .categories a:hover {
+    box-shadow: 0 12px 15px -2px lightskyblue;
+  }
+  /* left side nav related end */
+
+  /* footer related start  */
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(36, 107, 107);
+    padding: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+footer section {
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+
+}    
+
+footer :last-child {
+  margin-right: 0;
+}
+
+footer h2 {
+    color: white;
+    border-bottom: 1px solid white;
+    margin-bottom: 10px;
+    padding-bottom: 3px;
+    font-size: 15px;
+    letter-spacing: 4px;
+}
+
+footer a {
+   color: white;
+   text-decoration: none;
+   font-weight: bold;
+   margin-bottom: 10px;
+   font-size: 10px;
+}
+
+footer a:hover {
+    border-bottom: 1px solid white;
+    margin-bottom: 9px;
+}
+
+ /* footer related end */
+
+ /* . item section related start */
+
+  .items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: sans-serif;
+    align-items: flex-start;
+    flex-grow: 1;
+ }
+    
+  section .item {
+    display: flex;
+    flex: 0 0 50px; 
+    margin-right: 12px;
+    margin-bottom: 12px;
+    flex-direction: column;
+    box-shadow: 0 12px 15px -2px rgb(19, 53, 73);
+ }
+
+ .item-name, .fact-line {
+    background-color: aqua;
+ }
+
+ .item-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 15px;
+    font-size: 20px;
+    color: blue;
+ }
+
+ .add-item {
+    background-color: darkblue;
+    color: aliceblue;
+    border-radius: 50%; 
+    padding: 10px;
+  }
+
+.fact-line {
+  color: aliceblue;
+  background-color: rgb(70, 70, 251);
+  padding: 10px;
+}
+
+.item-description {
+  padding: 15px;
+}
+
+ /* .item section related end */
+
+ /* Media Queries  Items */
+ @media (max-width: 768px) {
+  .item {
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    flex-basis: 100%;
+  }
+  .items {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+}
